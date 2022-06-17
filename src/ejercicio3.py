@@ -27,10 +27,9 @@ def principal():
     """
     
     """
-    cadena1=input('Ingrese una cadena de caracteres: ')
-    cadena2=input('Ingrese otra cadena de caracteres: ')
-    lista1=list(cadena1)
-    lista2=list(cadena2)
+    lista1=list(input('Ingrese una cadena de caracteres: '))
+    lista2=list(input('Ingrese otra cadena de caracteres: '))
+    print(lista1)
     superpuestos=superposicion(lista1, lista2)
     print (f'El grado de superposición de caracteres es de: {superpuestos} elementos.')
     
