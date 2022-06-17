@@ -11,14 +11,21 @@ Sin utilizar lazos for o las funciones integradas del lenguaje que procesan secu
 """
 # Reemplazar por las funciones del ejercicio
 
-#def max_min_promedio(lista):
-#    lista_int=int(lista)
-#   i=0
-  #  while i < len(lista_int)
-   #     i+=1
-    #    if len
-      #  if lista_int[0] > lista_int[
-       # lista[0] + 1 =
+def es_maximo_minimo(lista):
+    lista_int=list(map(int, lista))
+    i=0
+    x=1
+    minimo=[0]
+    while i < len(lista_int) and x <= len(lista_int):
+        if lista_int[i] < lista_int[x]:
+            menor=lista_int[i]
+            minimo.append(menor)
+            minimo.remove(0)
+        else:
+            print('uwu')
+        i+=1
+        x+=1
+    return minimo
         
         
     #return (menor, mayor)
@@ -26,11 +33,11 @@ Sin utilizar lazos for o las funciones integradas del lenguaje que procesan secu
 def promediar(lista):
     lista_int=list(map(int, lista))
     suma=0
-    i=1
+    i=0
     while i < len(lista_int):
         suma+=lista_int[i]
         i+=1
-    promedio=suma/len(lista_int)
+    promedio=suma%len(lista_int)
     return promedio
 
 
@@ -48,8 +55,9 @@ def principal():
     lista.remove('.')
     #numeritos=max_min_promedio(lista)
     promedio=promediar(lista)
+    minimo=es_maximo_minimo(lista)
     print(f'{promedio}')
-        
+    print(minimo)
 
 
 if __name__ == "__main__":
