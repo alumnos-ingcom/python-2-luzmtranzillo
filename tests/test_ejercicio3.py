@@ -8,13 +8,13 @@ import pytest
 from ejercicio3 import superposicion
 
 """
-
+Test  de la funcion superposicion del  ejercicio3.py perteneciente al TP2 Python. 
 """
 
 
 def test_superposicion():
     """
-    Una breve descripción del caso de prueba aplicado a la función
+    Test que testea que las entradas y la salida de la funcion superposicion sean del tipo correcto. Además de que la salida de un resultado correcto.
     """
     lista1="Hola mundo"
     lista2="Hola"
