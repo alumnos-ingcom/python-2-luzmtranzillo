@@ -22,7 +22,6 @@ def es_par(numero):
     else:
         while numero<2:
             numero+=2
-        print(numero)
         if numero==2:
             resultado=1
         else:
