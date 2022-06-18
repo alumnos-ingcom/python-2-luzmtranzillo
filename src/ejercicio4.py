@@ -32,10 +32,9 @@ def es_nesimo_fibonacci(numero):
 
 def principal():
     """
-    Esta función es la que se encarga de la parte 'interactiva' del ejercicio
-    (La entrada, la llamada al algoritmo y la salida)
+    Función que pide el ingreso del n-esimo término de la secuencia fibonacci y retorna el número de esa posicion.
     """
-    numero=int(input("Enter the value of 'n': "))
+    numero=int(input("Ingrese un número para el n-esimo término de la secuencia fibonacci: "))
     if numero > 4:
         resultado=es_nesimo_fibonacci(numero)
     else:
