@@ -17,6 +17,9 @@ Implementar la funcion que decodifique el texto rotado una cantidad de posicione
 """
 
 def codificar(texto, posiciones):
+    '''
+    Función que codifica un texto en el cifrado del Cesar de acuerdo la posicion ingresada.
+    '''
     codificado=''
     for i in texto:
         numero_letra=ord(i)
@@ -26,6 +29,9 @@ def codificar(texto, posiciones):
     return codificado
 
 def descodificar(texto, posiciones):
+    """
+    Función que descodifica un texto en el cifrado del Cesar de acuerdo la posicion ingresada.
+    """
     descodificado=''
     for i in texto:
         numero_letra=ord(i)
@@ -37,8 +43,7 @@ def descodificar(texto, posiciones):
 
 def principal():
     """
-    Esta función es la que se encarga de la parte 'interactiva' del ejercicio
-    (La entrada, la llamada al algoritmo y la salida)
+    Funcion que devuelve la codificacion o descodicacion de un texto ingresado de acuerdo al numero de posiciones ingresada. 
     """
     print('~ El cifrado del Cesar ~')
     eleccion=input('Pulse 1 para codificar un texto o 2 descodificar un texto: ')
