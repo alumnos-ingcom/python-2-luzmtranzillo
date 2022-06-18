@@ -9,55 +9,50 @@ Implementar una función que obtenga los máximos, mínimos y promedio de una se
 
 Sin utilizar lazos for o las funciones integradas del lenguaje que procesan secuencias.
 """
-# Reemplazar por las funciones del ejercicio
 
 def es_maximo_minimo(lista):
+    """
+    Funcion que retorna el mayor y el menor de una lista ingresada.
+    """
     lista_int=list(map(int, lista))
     i=0
-    x=1
-    minimo=[0]
-    while i < len(lista_int) and x <= len(lista_int):
-        if lista_int[i] < lista_int[x]:
+    mayor=lista_int[i] 
+    menor=maximo=lista_int[i]
+    while i < len(lista_int):
+        if lista_int[i] < menor:
             menor=lista_int[i]
-            minimo.append(menor)
-            minimo.remove(0)
-        else:
-            print('uwu')
+        if lista_int[i] > mayor:
+            mayor=lista_int[i]
         i+=1
-        x+=1
-    return minimo
-        
-        
-    #return (menor, mayor)
+    return mayor, menor
+
         
 def promediar(lista):
+    """
+    Función que retorna el promedio de los valores numericos de una lista ingresada.
+    """
     lista_int=list(map(int, lista))
     suma=0
     i=0
     while i < len(lista_int):
         suma+=lista_int[i]
         i+=1
-    promedio=suma%len(lista_int)
-    return promedio
-
+    promedio=suma/len(lista_int)
+    return promedio,
+    
 
 
 def principal():
     """
-    Esta función es la que se encarga de la parte 'interactiva' del ejercicio
-    (La entrada, la llamada al algoritmo y la salida)
+    Función que pide el ingreso de numeros e imprime en forma de tupla el mayor, minimo y promedio de los mismos. 
     """
-    num=input('Ingrese un número. Cuando haya finalizado coloque un punto ')
-    lista=[]
-    while num!='.':
-        num=input('Ingrese un número ')
-        lista.append (num)
-    lista.remove('.')
-    #numeritos=max_min_promedio(lista)
+    print('Ingrese los numeros de la secuencia: ')
+    lista=[x for x in input() if x in "123456789"]
+    maximo_minimo=es_maximo_minimo(lista)
     promedio=promediar(lista)
-    minimo=es_maximo_minimo(lista)
-    print(f'{promedio}')
-    print(minimo)
+    tupla_resultados= maximo_minimo + promedio
+    print(f'El maximo, minimo, y promedio de los numeros ingresados son {tupla_resultados}')
+   
 
 
 if __name__ == "__main__":
