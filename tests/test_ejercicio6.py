@@ -8,9 +8,7 @@ import pytest
 from ejercicio6 import codificar, descodificar, principal
 
 """
-Describir aquí que es lo que se esta probando.
-Tengan en cuenta que el archivo tiene que llamarse igual
-que el archivo a probar agregando antes `test_`
+Tests de la funcion codificar y descodificar del ejercicio6.py
 """
 
 
@@ -27,7 +25,7 @@ def test_codificar():
     
 def test_descodificar():
     """
-    Test que verifica que la entrada, salida sean del tipo correcto y el codificado se haya realizado de manera correcta.
+    Test que verifica que la entrada, salida sean del tipo correcto y el descodificado se haya realizado de manera correcta.
     """
     texto=['j','q','n','c',' ','o','w','p','f','q',' ','1','0']
     posiciones=2
