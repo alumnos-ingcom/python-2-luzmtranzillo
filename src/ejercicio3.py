@@ -15,15 +15,14 @@ def superposicion(lista1, lista2):
     lista1_set=set(lista1)
     lista2_set=set(lista2)
     listas=lista1_set and lista2_set
-    if len(listas) > 0:
-        resultado=len(listas)
-    else:
-        resultado=0
-    #return resultado
-    #for x in lista1:
-    #    if x in lista2:
-     #       posicion=lista1.index(x)
-    return resultado #c posicion
+    grado=0
+    for i in lista1:
+        if i in lista2:
+            grado+=1
+            lista2.remove(i)
+        else:
+            continue
+    return grado
                 
     
 def principal():
@@ -32,8 +31,8 @@ def principal():
     """
     lista1=list(input('Ingrese una cadena de caracteres: '))
     lista2=list(input('Ingrese otra cadena de caracteres: '))
-    superpuestos=superposicion(lista1, lista2)
-    print (f'El grado de superposición de caracteres es de: {superpuestos} elementos.')
+    grado_superpuestos=superposicion(lista1, lista2)
+    print (f'El grado de superposición de caracteres es de: {grado_superpuestos} elementos.')
     
     
 
