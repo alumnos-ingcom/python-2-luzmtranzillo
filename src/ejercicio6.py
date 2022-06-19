@@ -88,6 +88,8 @@ def principal():
     elif eleccion == '2':
         descodificado=descodificar(texto, posiciones)
         print(f'Su texto descodificado {posiciones} posiciones es: {descodificado}')
+    else:
+        print('No ha ingresado una opción valida')
 
 if __name__ == "__main__":
     principal()
