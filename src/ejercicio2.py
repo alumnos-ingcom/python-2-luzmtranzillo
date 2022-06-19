@@ -46,8 +46,18 @@ def principal():
     """
     Función que pide el ingreso de numeros e imprime en forma de tupla el mayor, minimo y promedio de los mismos. 
     """
-    print('Ingrese los numeros de la secuencia: ')
-    lista=[x for x in input() if x in "123456789"]
+    print('Ingrese los numeros de la secuencia y cuando haya finalizado coloque un punto: ')
+    numero=0
+    lista=[]
+    caracteres_validos=['1','2','3','4','5','6','7','8','9','0','-1','-2','-3','-4','-5','-6','-7','-8','-9','.']
+    while numero != '.':
+        numero=input('Ingrese un número ')
+        if numero in caracteres_validos:
+            lista.append(numero)
+        else:
+            continue
+    lista.remove('.')
+    #lista=[x for x in input() if x in caracteres_validos]
     maximo_minimo=es_maximo_minimo(lista)
     promedio=promediar(lista)
     tupla_resultados= maximo_minimo + promedio
