@@ -38,7 +38,7 @@ def principal():
     if numero > 4:
         resultado=es_nesimo_fibonacci(numero)
     else:
-        resultado='Debe ingresar un número mayor a 4'
+        resultado='Debe ingresar un número mayor a 4.'
     print(resultado)
     
 
