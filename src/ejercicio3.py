@@ -12,9 +12,6 @@ def superposicion(lista1, lista2):
     """
     Funcion que recibe dos listas de caracteres y retorna la cantidad de valores repetidos.
     """
-    lista1_set=set(lista1)
-    lista2_set=set(lista2)
-    listas=lista1_set and lista2_set
     grado=0
     for i in lista1:
         if i in lista2:
