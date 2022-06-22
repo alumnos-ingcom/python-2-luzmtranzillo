@@ -79,16 +79,25 @@ def principal():
     """
     print('~ El cifrado del Cesar ~')
     eleccion=input('Pulse 1 para codificar un texto o 2 descodificar un texto: ')
-    print('Ingrese un texto: ')
-    texto = [x for x in input() if x in "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "]
-    posiciones=int(input('¿Cuantas posiciones desea rotar el texto? '))
     if eleccion == '1':
-        codificado=codificar(texto, posiciones)
-        print(f'Su texto codificado {posiciones} posiciones es: {codificado}')
+        print('Ingrese un texto: ')
+        texto = [x for x in input() if x in "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "]
+        posiciones=int(input('¿Cuantas posiciones desea rotar el texto? '))
+        if posiciones < 0:
+            print(f'No ha ingresado un numero de posicion valido.')
+        else:
+            codificado=codificar(texto, posiciones)
+            print(f'Su texto codificado {posiciones} posiciones es: {codificado}')
     elif eleccion == '2':
-        descodificado=descodificar(texto, posiciones)
-        print(f'Su texto descodificado {posiciones} posiciones es: {descodificado}')
-    else:
+        print('Ingrese un texto: ')
+        texto = [x for x in input() if x in "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "]
+        posiciones=int(input('¿Cuantas posiciones desea rotar el texto? '))
+        if posiciones < 0:
+            print(f'No ha ingresado un numero de posicion valido.')
+        else:
+            descodificado=descodificar(texto, posiciones)
+            print(f'Su texto descodificado {posiciones} posiciones es: {descodificado}')
+    elif eleccion != "1" or eleccion !="2":
         print('No ha ingresado una opción valida')
 
 if __name__ == "__main__":
